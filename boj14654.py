@@ -55,3 +55,12 @@ for i in range(n):
  else:s=1;w=[4,3][w>3]
  l+=[s]
 print(max(l))
+
+#03
+f=lambda:map(int,input().split());n=int(input());w=3;s=0;l=[];a,b=[*f()],[*f()]
+for i in range(n):
+ if abs(a[i]-b[i])==1:s,w=[[[1,s+1][w>3],4],[[s+1,1][w>3],3]][a[i]>b[i]]
+ elif abs(a[i]-b[i])==2:s,w=[[[s+1,1][w>3],3],[[1,s+1][w>3],4]][a[i]>b[i]]
+ else:s=1;w=[4,3][w>3]
+ l+=[s]
+print(max(l))
