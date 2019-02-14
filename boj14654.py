@@ -64,3 +64,5 @@ for i in range(n):
  else:s=1;w=[4,3][w>3]
  l+=[s]
 print(max(l))
+#04
+f=lambda:map(int,input().split());n=int(input());w=3;s=i=0;l=[];a,b=[*f()],[*f()];exec('s,w=[[1,[4,3][w>3]],[[[s+1,1][w>3],3],[[1,s+1][w>3],4]][a[i]>b[i]],[[[1,s+1][w>3],4],[[s+1,1][w>3],3]][a[i]>b[i]]][abs(a[i]-b[i])];l+=[s];i+=1;'*n);print(max(l))
