@@ -27,7 +27,6 @@ print(line1)
 #02
 t=input();x,y,z='.','#','*';a=b=c=''
 for i in range(len(t)):
- if (i+1)%3!=0:a+=x*2+y+x;b+=x+y+x+y;c+=[y,z][i%3==0 and i!=0]+x+t[i]+x
- else:a+=x*2+z+x;b+=x+z+x+z;c+=z+x+t[i]+x
-a+=x;b+=x;c+=[z,y][len(t)%3>0]
-print(a,b,c,b,a,sep='\n')
+ if (i+1)%3!=0:a+='..#.';b+='.#.#';c+=[y,z][i%3==0 and i!=0]+x+t[i]+x
+ else:a+='..*.';b+='.*.*';c+=z+x+t[i]+x
+a+=x;b+=x;c+=[z,y][len(t)%3>0];print(a,b,c,b,a,sep='\n')
