@@ -21,3 +21,14 @@ for i in range(2,n):
     dp[i]=[max(dp[i-2])+l[i],dp[i-1][0]+l[i]]
 
 print(max(dp[n-1]))
+
+
+#by experien
+from sys import stdin
+
+next(stdin)
+pp, p = (0, 0), (0, 0)
+for s in map(int, stdin):
+    pp, p = p, (s + max(pp[0], pp[1]), s + p[0])
+
+print(max(p))
