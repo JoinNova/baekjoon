@@ -15,3 +15,16 @@ for _ in'_'*k:
 		cnt.append(recnt)
 print('YNEOS'[sum(cnt)>n::2])
 #print(*box,*cnt)
+
+#02
+recnt=0;dic={}
+n,k=map(int,input().split())
+for _ in'_'*k:
+    txt=input()
+    mail=txt.replace('Re: ','')
+    recnt=txt.count('Re: ')+1
+    try:
+        dic[mail]=max(recnt,dic[mail])
+    except:
+        dic[mail]=recnt
+print('YNEOS'[sum(dic.values())>n::2])
